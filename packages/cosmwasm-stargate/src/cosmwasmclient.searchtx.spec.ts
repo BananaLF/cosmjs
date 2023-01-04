@@ -51,7 +51,7 @@ async function sendTokens(
 }> {
   const [{ address: walletAddress, pubkey: pubkeyBytes }] = await wallet.getAccounts();
   const pubkey = encodePubkey({
-    type: "tendermint/PubKeySecp256k1",
+    type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
     value: toBase64(pubkeyBytes),
   });
   const txBodyFields: TxBodyEncodeObject = {

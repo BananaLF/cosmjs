@@ -8,7 +8,7 @@ describe("addresses", () => {
   describe("pubkeyToRawAddress", () => {
     it("works for Secp256k1", () => {
       const pubkey = {
-        type: "tendermint/PubKeySecp256k1",
+        type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
         value: "AtQaCqFnshaZQp6rIkvAPyzThvCvXSDO+9AzbxVErqJP",
       };
       expect(pubkeyToRawAddress(pubkey)).toEqual(
@@ -52,7 +52,7 @@ describe("addresses", () => {
     it("works for Secp256k1", () => {
       const prefix = "cosmos";
       const pubkey = {
-        type: "tendermint/PubKeySecp256k1",
+        type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
         value: "AtQaCqFnshaZQp6rIkvAPyzThvCvXSDO+9AzbxVErqJP",
       };
       expect(pubkeyToAddress(pubkey, prefix)).toEqual("cosmos1h806c7khnvmjlywdrkdgk2vrayy2mmvf9rxk2r");

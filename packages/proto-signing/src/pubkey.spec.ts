@@ -11,7 +11,7 @@ describe("pubkey", () => {
 
   describe("encodePubkey", () => {
     it("works for secp256k1", () => {
-      const pubkey = { type: "tendermint/PubKeySecp256k1", value: defaultPubkeyBase64 };
+      const pubkey = { type: "ethermint.crypto.v1.ethsecp256k1.PubKey", value: defaultPubkeyBase64 };
       expect(encodePubkey(pubkey)).toEqual(
         Any.fromPartial({
           typeUrl: "/cosmos.crypto.secp256k1.PubKey",
@@ -36,7 +36,7 @@ describe("pubkey", () => {
         value: defaultPubkeyProtoBytes,
       };
       expect(decodePubkey(pubkey)).toEqual({
-        type: "tendermint/PubKeySecp256k1",
+        type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
         value: defaultPubkeyBase64,
       });
     });

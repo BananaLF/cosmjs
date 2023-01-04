@@ -163,7 +163,7 @@ function decodePubkey(data: RpcPubkey): ValidatorPubkey {
         algorithm: "ed25519",
         data: fromBase64(assertNotEmpty(data.value)),
       };
-    case "tendermint/PubKeySecp256k1":
+    case "ethermint.crypto.v1.ethsecp256k1.PubKey":
       return {
         algorithm: "secp256k1",
         data: fromBase64(assertNotEmpty(data.value)),

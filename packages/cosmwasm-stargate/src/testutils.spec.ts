@@ -77,7 +77,7 @@ export const bech32AddressMatcher = /^[\x21-\x7e]{1,83}1[02-9ac-hj-np-z]{38,58}$
 export const alice = {
   mnemonic: "enlist hip relief stomach skate base shallow young switch frequent cry park",
   pubkey0: {
-    type: "tendermint/PubKeySecp256k1",
+    type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
     value: "A9cXhWb8ZpqCzkA8dQCPV29KdeRLV3rUYxrkHudLbQtS",
   },
   address0: "wasm14qemq0vw6y3gc3u3e0aty2e764u4gs5lndxgyk",
@@ -90,7 +90,7 @@ export const alice = {
 /** Unused account */
 export const unused = {
   pubkey: {
-    type: "tendermint/PubKeySecp256k1",
+    type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
     value: "ArkCaFUJ/IH+vKBmNRCdUVl3mCAhbopk9jjW4Ko4OfRQ",
   },
   address: "wasm1cjsxept9rkggzxztslae9ndgpdyt240842kpxh",

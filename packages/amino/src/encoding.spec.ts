@@ -24,7 +24,7 @@ describe("encoding", () => {
     it("encodes a compressed pubkey", () => {
       const pubkey = fromBase64("AtQaCqFnshaZQp6rIkvAPyzThvCvXSDO+9AzbxVErqJP");
       expect(encodeSecp256k1Pubkey(pubkey)).toEqual({
-        type: "tendermint/PubKeySecp256k1",
+        type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
         value: "AtQaCqFnshaZQp6rIkvAPyzThvCvXSDO+9AzbxVErqJP",
       });
     });
@@ -43,7 +43,7 @@ describe("encoding", () => {
         "cosmospub1addwnpepqd8sgxq7aw348ydctp3n5ajufgxp395hksxjzc6565yfp56scupfqhlgyg5",
       ).data;
       expect(decodeAminoPubkey(amino)).toEqual({
-        type: "tendermint/PubKeySecp256k1",
+        type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
         value: "A08EGB7ro1ORuFhjOnZcSgwYlpe0DSFjVNUIkNNQxwKQ",
       });
     });
@@ -69,7 +69,7 @@ describe("encoding", () => {
         "cosmospub1addwnpepqd8sgxq7aw348ydctp3n5ajufgxp395hksxjzc6565yfp56scupfqhlgyg5",
       ).data;
       const pubkey = {
-        type: "tendermint/PubKeySecp256k1",
+        type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
         value: "A08EGB7ro1ORuFhjOnZcSgwYlpe0DSFjVNUIkNNQxwKQ",
       };
 
@@ -117,7 +117,7 @@ describe("encoding", () => {
       expect(
         decodeBech32Pubkey("cosmospub1addwnpepqd8sgxq7aw348ydctp3n5ajufgxp395hksxjzc6565yfp56scupfqhlgyg5"),
       ).toEqual({
-        type: "tendermint/PubKeySecp256k1",
+        type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
         value: "A08EGB7ro1ORuFhjOnZcSgwYlpe0DSFjVNUIkNNQxwKQ",
       });
     });
@@ -126,7 +126,7 @@ describe("encoding", () => {
       expect(
         decodeBech32Pubkey("enigmapub1addwnpepqw5k9p439nw0zpg2aundx4umwx4nw233z5prpjqjv5anl5grmnchzp2xwvv"),
       ).toEqual({
-        type: "tendermint/PubKeySecp256k1",
+        type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
         value: "A6lihrEs3PEFCu8m01ebcas3KjEVAjDIEmU7P9ED3PFx",
       });
     });
@@ -153,7 +153,7 @@ describe("encoding", () => {
   describe("encodeAminoPubkey", () => {
     it("works for secp256k1", () => {
       const pubkey: Pubkey = {
-        type: "tendermint/PubKeySecp256k1",
+        type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
         value: "A08EGB7ro1ORuFhjOnZcSgwYlpe0DSFjVNUIkNNQxwKQ",
       };
       const expected = fromBech32(
@@ -179,7 +179,7 @@ describe("encoding", () => {
   describe("encodeBech32Pubkey", () => {
     it("works for secp256k1", () => {
       const pubkey: Pubkey = {
-        type: "tendermint/PubKeySecp256k1",
+        type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
         value: "A08EGB7ro1ORuFhjOnZcSgwYlpe0DSFjVNUIkNNQxwKQ",
       };
       expect(encodeBech32Pubkey(pubkey, "cosmospub")).toEqual(

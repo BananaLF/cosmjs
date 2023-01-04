@@ -16,7 +16,7 @@ describe("accounts", () => {
       expect(account).toEqual({
         address: "akash1qy0vur3fl2ucztpzcrfea7mc8jwz8xjmvq7qvy",
         pubkey: {
-          type: "tendermint/PubKeySecp256k1",
+          type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
           value: "A/XsdhwSIKU73TltD9STcaS07FNw0szR4a+oDLr6vika",
         },
         accountNumber: 56,

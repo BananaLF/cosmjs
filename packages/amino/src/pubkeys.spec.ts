@@ -6,7 +6,7 @@ describe("pubkeys", () => {
     value: "YZHlYxP5R6olj3Tj3f7VgkQE5VaOvv9G0jKATqdQsqI=",
   };
   const pubkeySecp256k1 = {
-    type: "tendermint/PubKeySecp256k1",
+    type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
     value: "AtQaCqFnshaZQp6rIkvAPyzThvCvXSDO+9AzbxVErqJP",
   };
   const pubkeyMultisigThreshold = {
@@ -15,19 +15,19 @@ describe("pubkeys", () => {
       threshold: "3",
       pubkeys: [
         {
-          type: "tendermint/PubKeySecp256k1",
+          type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
           value: "A4KZH7VSRwW/6RTExROivRYKsQP63LnGcBlXFo+eKGpQ",
         },
         {
-          type: "tendermint/PubKeySecp256k1",
+          type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
           value: "A8/Cq4VigOnDgl6RSdcx97fjrdCo/qwAX6C34n7ZDZLs",
         },
         {
-          type: "tendermint/PubKeySecp256k1",
+          type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
           value: "ApKgZuwy03xgdRnXqG6yEHATomsWDOPacy7nbpsuUCSS",
         },
         {
-          type: "tendermint/PubKeySecp256k1",
+          type: "ethermint.crypto.v1.ethsecp256k1.PubKey",
           value: "Aptm8E3WSSFS0RTAIUW+bLi/slYnTEE+h4qPTG28CHfq",
         },
       ],
